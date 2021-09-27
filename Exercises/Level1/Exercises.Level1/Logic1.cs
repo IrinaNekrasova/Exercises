@@ -19,8 +19,17 @@ namespace Exercises.Level1
         /// </summary>
         public bool CigarParty(int cigars, bool isWeekend)
         {
-            throw new NotImplementedException();
+            if (cigars >= 40 && (cigars <= 60 || isWeekend))
+            {
+                return true;
+            }
+
+
+
+            return false;
         }
+
+
 
         /// <summary>
         /// You and your date are trying to get a table at a restaurant. The parameter "you" is the
@@ -36,7 +45,15 @@ namespace Exercises.Level1
         /// </summary>
         public int DateFashion(int you, int date)
         {
-            throw new NotImplementedException();
+            if (you <= 2 || date <= 2)
+            {
+                return 0;
+            }
+            if (you >= 8 || date >= 8)
+            {
+                return 2;
+            }
+            return 1;
         }
 
         /// <summary>
@@ -51,7 +68,16 @@ namespace Exercises.Level1
         /// </summary>
         public bool SquirrelPlay(int temp, bool isSummer)
         {
-            throw new NotImplementedException();
+            if (temp >= 60 && temp <= 90)
+            {
+                return true;
+            }
+            if (temp >= 60 && (temp <= 100 && isSummer))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         /// <summary>
@@ -67,8 +93,20 @@ namespace Exercises.Level1
         /// </summary>
         public int CaughtSpeeding(int speed, bool isBirthday)
         {
-            throw new NotImplementedException();
+            if (speed <= 60 || (speed <= 65 && isBirthday))
+            {
+                return 0;
+            }
+            if (speed >= 60 && (speed <= 80 || (isBirthday && speed <= 85)))
+            {
+                return 1;
+            }
+
+            return 2;
         }
+
+
+
 
         /// <summary>
         /// Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are
@@ -80,7 +118,13 @@ namespace Exercises.Level1
         /// </summary>
         public int SortaSum(int a, int b)
         {
-            throw new NotImplementedException();
+            if ((a + b) >= 10 && (a + b) <= 19)
+            {
+                return 20;
+            }
+
+
+            return (a + b);
         }
 
         /// <summary>
@@ -110,7 +154,8 @@ namespace Exercises.Level1
         /// </summary>
         public bool Love6(int a, int b)
         {
-            throw new NotImplementedException();
+
+            return false;
         }
 
         /// <summary>
@@ -124,7 +169,16 @@ namespace Exercises.Level1
         /// </summary>
         public bool In1To10(int n, bool outsideMode)
         {
-            throw new NotImplementedException();
+            if (n >= 1 && n <= 10)
+            {
+                return true;
+            }
+            if ((n <= 1 || n >= 10) && outsideMode)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         /// <summary>
