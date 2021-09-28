@@ -154,9 +154,15 @@ namespace Exercises.Level1
         /// </summary>
         public bool Love6(int a, int b)
         {
+            if (a==6 || b ==6 || (a+b ==6) || (Math.Abs(a) - Math.Abs(b) == 6) || (Math.Abs(b) - Math.Abs(a) == 6))
+            {
+                return true;
+            }
+
 
             return false;
-        }
+
+                   }
 
         /// <summary>
         /// Given a number n, return true if n is in the range 1..10, inclusive. Unless outsideMode is
@@ -169,15 +175,15 @@ namespace Exercises.Level1
         /// </summary>
         public bool In1To10(int n, bool outsideMode)
         {
-            if (n >= 1 && n <= 10)
-            {
-                return true;
-            }
-            if ((n <= 1 || n >= 10) && outsideMode)
+           if (n >= 1 && n <= 10) 
             {
                 return true;
             }
 
+            if((n <= 1 || n >= 10) && outsideMode)
+            {
+                return true;
+            }
             return false;
         }
 
@@ -191,7 +197,16 @@ namespace Exercises.Level1
         /// </summary>
         public bool SpecialEleven(int n)
         {
-            throw new NotImplementedException();
+            int b;
+            int c;
+            b = n % 11;
+            c = (n % 11);
+            if (b == 0 || c==1)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         /// <summary>
@@ -204,7 +219,15 @@ namespace Exercises.Level1
         /// </summary>
         public bool More20(int n)
         {
-            throw new NotImplementedException();
+            
+           
+            if((Math.Abs(n-1) % 20 == 0) || (Math.Abs(n - 2) % 20 == 0))
+            {
+                return true;
+            }
+
+
+            return false;
         }
 
         /// <summary>
