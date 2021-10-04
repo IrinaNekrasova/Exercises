@@ -18,7 +18,11 @@ namespace Exercises.Level1
         /// </summary>
         public bool FirstLast6(int[] nums)
         {
-            throw new NotImplementedException();
+            bool IsFirst = nums[0] == 6;
+            int lastIndex = nums.Length - 1;
+
+            bool IsLast = nums[lastIndex] == 6;
+            return IsFirst || IsLast;
         }
 
         /// <summary>
@@ -31,7 +35,13 @@ namespace Exercises.Level1
         /// </summary>
         public bool SameFirstLast(int[] nums)
         {
-            throw new NotImplementedException();
+            if(nums.Length == 0)
+            { 
+                return false;
+            }
+           
+                return nums[0] == nums[nums.Length - 1];
+           
         }
 
         /// <summary>
@@ -41,7 +51,8 @@ namespace Exercises.Level1
         /// </summary>
         public int[] MakePi()
         {
-            throw new NotImplementedException();
+            int[] array = { 3, 1, 4 };
+            return array;
         }
 
         /// <summary>
@@ -54,7 +65,11 @@ namespace Exercises.Level1
         /// </summary>
         public bool CommonEnd(int[] a, int[] b)
         {
-            throw new NotImplementedException();
+           if(a[0] == b[0] || a[a.Length -1] == b[b.Length-1])
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -66,7 +81,12 @@ namespace Exercises.Level1
         /// </summary>
         public int Sum3(int[] nums)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            for(int i = 0; i < nums.Length; i++)
+            {
+                sum = sum + nums[i];
+            }
+            return sum;
         }
 
         /// <summary>
@@ -79,8 +99,24 @@ namespace Exercises.Level1
         /// </summary>
         public int[] RotateLeft3(int[] nums)
         {
-            throw new NotImplementedException();
+            int rotate = nums[0];
+
+            for (int i = 0; i < nums.Length - 1; i++)
+            {
+                nums[i] = nums[i + 1];
+            }
+
+            nums[nums.Length - 1] = rotate;
+
+            return nums;
+
+
+           // return new int[] { nums[1], nums[2], nums[0] };
+
         }
+
+
+
 
         /// <summary>
         /// Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2,
@@ -92,7 +128,7 @@ namespace Exercises.Level1
         /// </summary>
         public int[] Reverse3(int[] nums)
         {
-            throw new NotImplementedException();
+            return new int[] { nums[1], nums[2], nums[0] };
         }
 
         /// <summary>
