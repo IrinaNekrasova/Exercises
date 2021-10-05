@@ -154,7 +154,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool Love6(int a, int b)
         {
-            if (a==6 || b ==6 || (a+b ==6) || (Math.Abs(a) - Math.Abs(b) == 6) || (Math.Abs(b) - Math.Abs(a) == 6))
+            if (a==6 || b ==6 || (a+b ==6) || (Math.Abs(a - b) == 6) || (Math.Abs(b - a) == 6))
             {
                 return true;
             }
@@ -240,7 +240,16 @@ namespace Exercises.Level1
         /// </summary>
         public bool Old35(int n)
         {
-            throw new NotImplementedException();
+           if((n % 3 == 0) && (n % 5  != 0)) 
+            {
+                return true;
+            }
+           else if ((n % 5 == 0) && (n % 3 != 0))
+            {
+                return true;
+            }
+            return false;
+
         }
 
         /// <summary>
@@ -254,7 +263,15 @@ namespace Exercises.Level1
         /// </summary>
         public bool Less20(int n)
         {
-            throw new NotImplementedException();
+            
+            if((n +1) % 20 == 0 || (n+2) % 20 == 0)
+            {
+                return true;
+            }
+            return false;
+
+
+
         }
 
         /// <summary>
@@ -268,7 +285,17 @@ namespace Exercises.Level1
         /// </summary>
         public bool NearTen(int num)
         {
-            throw new NotImplementedException();
+            if(num % 10 == 0 || (num + 1 )%10 == 0 || (num - 1) %10 == 0)
+            {
+                return true;
+            }
+            else if((num + 2) % 10 == 0 || (num - 2) % 10 == 0)
+            {
+                return true;
+            }
+
+            return false;
+
         }
 
         /// <summary>
@@ -281,7 +308,15 @@ namespace Exercises.Level1
         /// </summary>
         public int TeenSum(int a, int b)
         {
-            throw new NotImplementedException();
+            int Sum;
+           if((a >=13 && a <=19) || (b >= 13 && b <= 19))
+            {
+                return 19;
+            }
+            Sum = a + b;
+            return Sum;
+
+
         }
 
         /// <summary>
@@ -295,7 +330,19 @@ namespace Exercises.Level1
         /// </summary>
         public bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
         {
-            throw new NotImplementedException();
+
+            if (isMorning && isMom && isAsleep == false)
+            {
+                return true;
+            }
+            else if (isAsleep || isMorning && isMom == false)
+            {
+                return false;
+            }
+          
+
+            return true;
+
         }
 
         /// <summary>
@@ -311,7 +358,19 @@ namespace Exercises.Level1
         /// </summary>
         public int TeaParty(int tea, int candy)
         {
-            throw new NotImplementedException();
+            if((tea >= 5 && candy >= 5) && ((tea/candy) >= 2 || (candy / tea) >= 2))
+            {
+                return 2;
+            }
+            else if (tea>=5 && candy >= 5)
+            {
+                return 1;
+            }
+            return 0;
+
+
+
+
         }
 
         /// <summary>
@@ -353,7 +412,18 @@ namespace Exercises.Level1
         /// </summary>
         public bool TwoAsOne(int a, int b, int c)
         {
-            throw new NotImplementedException();
+            int Sum1 = a + b;
+            int Sum2 = a + c;
+            int Sum3 = c + b;
+            if(Sum1 == c || Sum2 == b || Sum3 == a)
+            {
+                return true;
+            }
+
+            return false;
+
+
+
         }
 
         /// <summary>
@@ -366,7 +436,16 @@ namespace Exercises.Level1
         /// </summary>
         public bool InOrder(int a, int b, int c, bool bOk)
         {
-            throw new NotImplementedException();
+            if (bOk && c > b)
+            {
+                return true;
+            }
+
+            else if (b>a && c > b)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -380,7 +459,15 @@ namespace Exercises.Level1
         /// </summary>
         public bool InOrderEqual(int a, int b, int c, bool bOk)
         {
-            throw new NotImplementedException();
+            if (bOk && a<=b && b<=c && a <= c)
+            {
+                return true;
+            }
+            else if(a < b && a<c && b < c)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -394,7 +481,18 @@ namespace Exercises.Level1
         /// </summary>
         public bool LastDigit(int a, int b, int c)
         {
-            throw new NotImplementedException();
+            int Num1 = a % 10;
+            int Num2 = b % 10;
+            int Num3 = c % 10;
+            if(Num1 == Num2 || Num1 == Num3 || Num2 == Num3)
+            {
+                return true;
+            }
+            return false;
+
+
+
+
         }
 
         /// <summary>
@@ -407,7 +505,14 @@ namespace Exercises.Level1
         /// </summary>
         public bool LessBy10(int a, int b, int c)
         {
-            throw new NotImplementedException();
+            if (a - 10 >= b || c - 10 >= b || b - 10 >= b || b - 10 >= c || c - 10 >= a)
+            {
+                return true;
+            }
+            return false;
+
+
+
         }
 
         /// <summary>
