@@ -99,14 +99,14 @@ namespace Exercises.Level1
         /// </summary>
         public int[] RotateLeft3(int[] nums)
         {
-            int rotate = nums[0];
+            int Rotated = nums[0];
 
             for (int i = 0; i < nums.Length - 1; i++)
             {
                 nums[i] = nums[i + 1];
             }
 
-            nums[nums.Length - 1] = rotate;
+            nums[nums.Length - 1] = Rotated;
 
             return nums;
 
@@ -128,7 +128,22 @@ namespace Exercises.Level1
         /// </summary>
         public int[] Reverse3(int[] nums)
         {
-            return new int[] { nums[1], nums[2], nums[0] };
+
+            int Reversed = nums[0];
+
+            for (int i = 0; i < nums.Length - 1; i++)
+            {
+                nums[0] = nums[nums.Length - 1];
+                nums[i] = nums[i];
+                nums[nums.Length - 1] = nums[0];
+            }
+
+            nums[0] = Reversed;
+
+            return nums;
+
+
+            //return new int[] { nums[2], nums[1], nums[0] };
         }
 
         /// <summary>
@@ -141,7 +156,41 @@ namespace Exercises.Level1
         /// </summary>
         public int[] MaxEnd3(int[] nums)
         {
-            throw new NotImplementedException();
+            int Replaced = nums[0];
+            if (nums[0] > nums[nums.Length - 1])
+            {
+                for (int i = 0; i < nums.Length - 1; i++)
+                {
+                   
+                    nums[1] = nums[0];
+                    nums[nums.Length - 1] = nums[0];
+                }
+                return nums;
+            }
+            Replaced = nums[nums.Length - 1];
+            return nums;
+            }
+            
+          
+            
+
+
+
+
+
+            //if (nums[0] > nums[nums.Length -1])
+            //{
+            //    nums[1] = nums[0];
+            //    nums[nums.Length - 1] = nums[0];
+            //}
+            //else
+            //{
+            //    nums[0] = nums[nums.Length - 1];
+            //    nums[1] = nums[nums.Length - 1];
+            //}
+            //return nums;
+
+
         }
 
         /// <summary>
@@ -155,7 +204,20 @@ namespace Exercises.Level1
         /// </summary>
         public int Sum2(int[] nums)
         {
-            throw new NotImplementedException();
+            int SumOfElements;
+            if (nums.Length == 0)
+            {
+                return 0;
+            }
+            else if (nums.Length == 1)
+            {
+                return nums[0];
+            }
+            SumOfElements = nums[0] + nums[1];
+            return SumOfElements;
+
+
+
         }
 
         /// <summary>
@@ -168,7 +230,14 @@ namespace Exercises.Level1
         /// </summary>
         public int[] MiddleWay(int[] a, int[] b)
         {
+
+
+
             throw new NotImplementedException();
+
+
+
+
         }
 
         /// <summary>
