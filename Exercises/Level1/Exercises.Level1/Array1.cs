@@ -35,13 +35,13 @@ namespace Exercises.Level1
         /// </summary>
         public bool SameFirstLast(int[] nums)
         {
-            if(nums.Length == 0)
-            { 
+            if (nums.Length == 0)
+            {
                 return false;
             }
-           
-                return nums[0] == nums[nums.Length - 1];
-           
+
+            return nums[0] == nums[nums.Length - 1];
+
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool CommonEnd(int[] a, int[] b)
         {
-           if(a[0] == b[0] || a[a.Length -1] == b[b.Length-1])
+            if (a[0] == b[0] || a[a.Length - 1] == b[b.Length - 1])
             {
                 return true;
             }
@@ -82,7 +82,7 @@ namespace Exercises.Level1
         public int Sum3(int[] nums)
         {
             int sum = 0;
-            for(int i = 0; i < nums.Length; i++)
+            for (int i = 0; i < nums.Length; i++)
             {
                 sum = sum + nums[i];
             }
@@ -111,7 +111,7 @@ namespace Exercises.Level1
             return nums;
 
 
-           // return new int[] { nums[1], nums[2], nums[0] };
+            // return new int[] { nums[1], nums[2], nums[0] };
 
         }
 
@@ -161,7 +161,7 @@ namespace Exercises.Level1
             {
                 for (int i = 0; i < nums.Length - 1; i++)
                 {
-                   
+
                     nums[1] = nums[0];
                     nums[nums.Length - 1] = nums[0];
                 }
@@ -169,10 +169,10 @@ namespace Exercises.Level1
             }
             Replaced = nums[nums.Length - 1];
             return nums;
-            }
-            
-          
-            
+
+
+
+
 
 
 
@@ -189,7 +189,6 @@ namespace Exercises.Level1
             //    nums[1] = nums[nums.Length - 1];
             //}
             //return nums;
-
 
         }
 
