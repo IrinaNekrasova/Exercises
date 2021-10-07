@@ -175,12 +175,11 @@ namespace Exercises.Level1
         /// </summary>
         public bool In1To10(int n, bool outsideMode)
         {
-           if (n >= 1 && n <= 10) 
-            {
-                return true;
+            if (outsideMode && (n <= 1 || n >= 10)) 
+            { 
+                return true; 
             }
-
-            if((n <= 1 || n >= 10) && outsideMode)
+            else if(outsideMode == false && (n>=1 && n <= 10))
             {
                 return true;
             }
@@ -525,8 +524,29 @@ namespace Exercises.Level1
         /// withoutDoubles(3, 3, false) → 6
         /// </summary>
         public int WithoutDoubles(int die1, int die2, bool noDoubles)
-        {
-            throw new NotImplementedException();
+        { int sum = 0;
+            if (noDoubles && die1 == die2)
+            {
+                if(die1 == 6 && die2 <= 6)
+                {
+                    die1 = 1;
+                    return die2+die1;
+                }
+                else if (die2 == 6 && die1 <= 6)
+                {
+                    die2 = 1;
+                    return die1 + die2;
+                }
+                return sum = die1 + die2 + 1;
+            }
+
+            return sum = die1 + die2;
+
+
+
+
+
+
         }
 
         /// <summary>
@@ -541,7 +561,30 @@ namespace Exercises.Level1
         /// </summary>
         public int MaxMod5(int a, int b)
         {
-            throw new NotImplementedException();
+            bool d = a > b;
+            bool e = b > a;
+            
+            if (a == b)
+            {
+                return 0;
+            }
+            else if (a%5 == b%5)
+            {
+                if (d)
+                {
+                    return b;
+                }
+                return a;
+            }
+
+            if (d)
+            {
+                return a;
+            }
+            return b;
+
+
+
         }
 
         /// <summary>
@@ -556,7 +599,21 @@ namespace Exercises.Level1
         /// </summary>
         public int RedTicket(int a, int b, int c)
         {
-            throw new NotImplementedException();
+            
+            if (a == b && b==c)
+               {if(a == b && b == c && c == 2)
+                {
+                    return 10;
+                }
+                
+                return 5;
+                }
+            else if (a!=b && a!=c)
+            { return 1; }
+            return 0;
+           
+            
+        
         }
 
         /// <summary>
@@ -570,7 +627,17 @@ namespace Exercises.Level1
         /// </summary>
         public int GreenTicket(int a, int b, int c)
         {
-            throw new NotImplementedException();
+            if (a==b && b==c)
+            {
+                return 20;
+            }
+            else if ((a==b && b!=c)|| (a==c&& b!=c) || (b==c && a != c))
+            {
+                return 10;
+            }
+            return 0;
+
+
         }
 
         /// <summary>
